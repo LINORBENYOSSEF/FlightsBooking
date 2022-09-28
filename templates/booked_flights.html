@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Booked Flights{% endblock %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app.css') }}">
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    loadBookedFlights();
+});
+</script>
+{% endblock %}
+{% block body %}
+<div class="row padding">
+    <div class="col-12">
+        <!-- all flights -->
+        <div id="flights-container" class="card-columns">
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

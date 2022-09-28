@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+
+<script language='javascript' type='text/javascript'>
+    function repeatPasswordCheck(input) {
+        if (input.value != document.getElementById('password').value) {
+            input.setCustomValidity('Password Must be Matching.');
+        } else {
+            input.setCustomValidity('');
+        }
+    }
+</script>
+{% endblock %}
+{% block body %}
+<div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+            <div class="card-body">
+                <h5 class="card-title text-center">Register</h5>
+                <form class="form-signin" action="/register" method="post">
+                    <div class="form-label-group">
+                        <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
+                        <label for="username">Username</label>
+                        <div name="error-block" class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-label-group">
+                        <input type="password" id="password" class="form-control" placeholder="Password" required>
+                        <label for="password">Password</label>
+                        <div name="error-block" class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-label-group">
+                        <input type="password" id="repeat-password" class="form-control" placeholder="Repeat Password"
+                               oninput="repeatPasswordCheck(this)" required>
+                        <label for="repeat-password">Repeat Password</label>
+                        <div name="error-block" class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-label-group">
+                        <input type="text" id="first-name" class="form-control" placeholder="First Name" required>
+                        <label for="first-name">First Name</label>
+                        <div name="error-block" class="invalid-feedback"></div>
+                    </div>
+                    <div class="form-label-group">
+                        <input type="text" id="last-name" class="form-control" placeholder="Last Name" required>
+                        <label for="last-name">Last Name</label>
+                        <div name="error-block" class="invalid-feedback"></div>
+                    </div>
+                    {% if error is defined %}
+                        <div class="alert alert-danger rounded mr-2" role="alert">{{ error }}</div>
+                    {% endif %}
+                    <input type="submit" class="btn btn-lg btn-primary btn-block text-uppercase" value="Create Account">
+                </form>
+            </div>
+            <div class="card-footer">
+                <div class="d-flex justify-content-center links">
+                    Already have an account? &nbsp; <a href="/login">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
