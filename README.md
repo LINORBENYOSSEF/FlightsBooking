@@ -1,4 +1,4 @@
-# Mongodb-multi-document-transactions  
+# FlightsBooking Mongodb-multi-document-transactions  
   This project saving data of flights booking with commitTransaction.
   We can add\delete a flights and watch each user booked flights.
 
