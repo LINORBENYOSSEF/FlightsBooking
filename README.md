@@ -2,6 +2,7 @@
   This project saving data of flights booking with commitTransaction.
   We can add\delete a flights and watch each user booked flights.
 
+https://user-images.githubusercontent.com/49592750/192870812-fbe549b2-351c-4bcf-9375-872e7b7134c0.mp4
 
  ## MongoDB 
 - Check ubuntu version 
@@ -100,3 +101,11 @@ another user can only see all the operations or none of them.
       sudo apt install python3
       sudo apt install python3-pip
       pip3 install -r requirements.txt 
+      
+Logs:
+![log](https://user-images.githubusercontent.com/49592750/192871200-63fef5b8-b247-4408-b960-feb666922d95.jpg)
+
+Tables:
+![tables](https://user-images.githubusercontent.com/49592750/192871622-127707ce-2191-43f1-adc8-180092f104eb.jpg)
+
+
