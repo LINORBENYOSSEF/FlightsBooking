@@ -1,3 +1,5 @@
+# variables mapping attribute names to Field objects
+# The schemas define the structure of the data and also the validation of the data.
 import uuid
 
 from marshmallow import Schema, fields, post_load
